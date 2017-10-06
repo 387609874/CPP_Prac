@@ -25,7 +25,7 @@ public:
     bool pushBack( int item );
 
     int listSize();
-    void printList();
+    virtual void printList();
     std::vector<int> itemList; // Should be private only for practice
     std::string className; // Should be private only for practice
 };
