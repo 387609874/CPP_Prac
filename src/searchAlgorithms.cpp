@@ -1,33 +1,11 @@
+#include <algorithm>
 #include "searchAlgorithms.h"
 
 searchAlgorithms::searchAlgorithms()
 {
-    int i = 0;
-    // add some random value into the list
-    // TODO: make the list more usable
-    for( i = 0; i < 6; i++ )
-    {
-        itemList.push_back(i);
-    }
-}
-
-searchAlgorithms::searchAlgorithms( std::vector<int> targetList )
-{
-    itemList = targetList;
-}
-
-searchAlgorithms::~searchAlgorithms()
-{
-    itemList.clear();
-}
-
-bool searchAlgorithms::pushBack( int item )
-{
-    itemList.push_back( item );
-}
-int searchAlgorithms::listSize()
-{
-    return itemList.size();
+    // make sure list is sorted for binary search
+    className = "searchAlgorithms";
+    std::sort( itemList.begin(), itemList.end() );
 }
 
 int searchAlgorithms::linearSearch( int target )

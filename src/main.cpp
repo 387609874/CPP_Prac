@@ -1,13 +1,15 @@
 #include <iostream>
 #include "searchAlgorithms.h"
+#include "sortAlgorithms.h"
 
 int main()
 {
     searchAlgorithms a;
-    std::cout<< "item found in pos: " << a.linearSearch( 1 ) << std::endl;
-    std::cout<< "item found in pos: " << a.binarySearch( 1 ) << std::endl;
-    std::cout<< "item found in pos: " << a.binarySearchRecursive( 1, 0, a.listSize() ) << std::endl;
-    std::cout<< "item found in pos: " << a.binarySearchRecursive( 6, 0, a.listSize() ) << std::endl;
+    sortAlgorithms b;
+    a.printList();
+    std::cout<< "item found in pos: " << a.linearSearch( 83 ) << std::endl;
+    std::cout<< "item found in pos: " << a.binarySearch( 83 ) << std::endl;
+    std::cout<< "item found in pos: " << a.binarySearchRecursive( 83, 0, a.listSize() ) << std::endl;
 
     return 0;
 }
