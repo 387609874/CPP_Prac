@@ -3,6 +3,9 @@
 #include <string>
 #include <vector>
 
+#ifndef ALGORITHMSBASE_H
+#define ALGORITHMSBASE_H
+
 static const int ITEM_NOT_FOUND = -1;
 enum IF_ORDERED
 {
@@ -26,3 +29,5 @@ public:
     std::vector<int> itemList; // Should be private only for practice
     std::string className; // Should be private only for practice
 };
+
+#endif // ALGORITHMSBASE_H

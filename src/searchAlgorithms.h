@@ -1,5 +1,8 @@
 #include "algorithmsBase.h"
 
+#ifndef SEARCHALGORITHMS_H
+#define SEARCHALGORITHMS_H
+
 class searchAlgorithms : public algorithmsBase
 {
 public:
@@ -14,3 +17,5 @@ public:
     int binarySearchRecursive( int target, int l, int r );
 
 };
+
+#endif // SEARCHALGORITHMS_H
