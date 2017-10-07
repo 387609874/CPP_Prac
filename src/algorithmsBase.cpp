@@ -16,11 +16,6 @@ algorithmsBase::algorithmsBase( std::vector<int> &v )
     itemList = v;
 }
 
-algorithmsBase::~algorithmsBase()
-{
-    itemList.clear();
-}
-
 bool algorithmsBase::pushBack( int item )
 {
     itemList.push_back( item );
@@ -29,6 +24,13 @@ bool algorithmsBase::pushBack( int item )
 int algorithmsBase::listSize()
 {
     return itemList.size();
+}
+
+void algorithmsBase::swapVals( int& a, int &b )
+{
+    int temp = a;
+    a = b;
+    b = temp;
 }
 
 void algorithmsBase::printList()
@@ -40,4 +42,17 @@ void algorithmsBase::printList()
         std::cout << itemList[i] << " ";
     }
     std::cout << std::endl;
+}
+
+IF_ORDERED algorithmsBase::isSorted( std::vector<int> list )
+{
+    int i = 0;
+    int size = list.size() - 1;
+    for( i = 0; i < size; i++ )
+    {
+        if( list[i] > list[i+1] )
+            return NOT_IN_ORDER;
+    }
+
+    return IN_ORDER;
 }

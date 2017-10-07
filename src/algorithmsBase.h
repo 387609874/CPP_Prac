@@ -18,14 +18,16 @@ class algorithmsBase
 public:
     algorithmsBase();
     algorithmsBase( std::vector<int> &targetList );
-    virtual ~algorithmsBase();
 
     // add items to list
     // return false if insert not successful
     bool pushBack( int item );
 
+    IF_ORDERED isSorted( std::vector<int> list );
     int listSize();
     virtual void printList();
+    void swapVals( int& a, int &b );
+
     std::vector<int> itemList; // Should be private only for practice
     std::string className; // Should be private only for practice
 };
