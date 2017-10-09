@@ -1,6 +1,5 @@
 #include "sortAlgorithms.h"
 
-#include <stdexcept>
 #include <iostream>
 #include <queue>
 
@@ -195,9 +194,7 @@ void sortAlgorithms::sort( SORT_ALGORITHMS alg )
             mergeSort( 0, sortedList.size() -1 );
             break;
         default:
-            throw std::invalid_argument( "binarySearchTree:: invalid order\n" );
             std::cout << "Invalid sortAlgorithms.\n";
-            break;
     }
     std::cout << "List after sort: ";
     sortAlgorithms::printList();
@@ -251,8 +248,6 @@ std::string sortAlgorithms::getAlgStr( SORT_ALGORITHMS alg )
             break;
         default:
             std::cout << "Invalid sortAlgorithms.\n";
-            throw std::invalid_argument( "binarySearchTree:: invalid order\n" );
-            break;
     }
 
     return algStr;
