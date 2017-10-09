@@ -1,11 +1,15 @@
-#include <iostream>
+#include "binarySearchTree.h"
 #include "searchAlgorithms.h"
 #include "sortAlgorithms.h"
+
+#include <iostream>
+#include <string>
 
 int main()
 {
     searchAlgorithms a;
     sortAlgorithms b;
+    binarySearchTree c( "num.txt" );
 
     // tests for sorting algorithms
     a.printList();
@@ -19,5 +23,7 @@ int main()
     b.sort( INSERTIONSORT );
     b.sort( QUICKSORT );
     b.sort( MERGESORT );
+
+    c.printbinarySearchTree();
     return 0;
 }
