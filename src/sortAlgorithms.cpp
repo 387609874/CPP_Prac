@@ -195,6 +195,8 @@ void sortAlgorithms::sort( SORT_ALGORITHMS alg )
             break;
         default:
             std::cout << "Invalid sortAlgorithms.\n";
+            throw std::runtime_error( "Invalid sortAlgorithms" );
+            break;
     }
     std::cout << "List after sort: ";
     sortAlgorithms::printList();
@@ -248,6 +250,8 @@ std::string sortAlgorithms::getAlgStr( SORT_ALGORITHMS alg )
             break;
         default:
             std::cout << "Invalid sortAlgorithms.\n";
+            throw std::runtime_error( "Invalid sortAlgorithms" );
+            break;
     }
 
     return algStr;

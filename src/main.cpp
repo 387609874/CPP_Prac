@@ -8,14 +8,14 @@
 int main()
 {
     searchAlgorithms a;
-    sortAlgorithms b;
-    binarySearchTree c( "num.txt" );
 
     // tests for sorting algorithms
     a.printList();
     std::cout<< "item found in pos: " << a.linearSearch( 83 ) << std::endl;
     std::cout<< "item found in pos: " << a.binarySearch( 83 ) << std::endl;
     std::cout<< "item found in pos: " << a.binarySearchRecursive( 83, 0, a.listSize() ) << std::endl;
+
+    sortAlgorithms b;
 
     // tests for storting algorithms
     b.sort( SELECTIONSORT );
@@ -24,6 +24,11 @@ int main()
     b.sort( QUICKSORT );
     b.sort( MERGESORT );
 
-    c.printbinarySearchTree();
+    binarySearchTree c( "num.txt" );
+
+    c.printbinarySearchTree( PREORDERTRAVERSAL );
+    c.printbinarySearchTree( INORDERTRAVERSAL );
+    c.printbinarySearchTree( POSTORDERTRAVERSAL );
+
     return 0;
 }
