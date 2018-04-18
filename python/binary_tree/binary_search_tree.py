@@ -4,7 +4,7 @@ class Node(object):
         self.left = left
         self.right = right
 
-class BinaryTree(object):
+class BinarySearchTree(object):
     '''
         CONSTRUCTOR
     '''
@@ -137,7 +137,7 @@ def test(testcase):
     testResults =[]
     for t in testcase:
         testR = []
-        bTree = BinaryTree(t["input"])
+        bTree = BinarySearchTree(t["input"])
         if bTree.getLeftChild() != t["left_child"]:
             testR.append(False)
         else:
